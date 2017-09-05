@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>John's Page</title>
+  <meta name="description" content="Your page">
+  <meta name="author" content="Your Name">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="test.js"></script> 
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+	<body>
+	  <header>
+	  	 <div class="navigation" id="topNav">
+		   <a href="#home">Home</a>
+		   <a href="#home">Rules</a>
+		   <a href="#about">About</a>
+		</div> 
+	  </header>
+	  <main>
+	    <button id="b1">CLICK HERE</button>
+	    <script>
+	        var player = new Player({
+				  name: 'John',
+				  id: 1,
+				  current: 1,
+				  genre: 'jazz',
+				});
+
+	        var player1 = new Player({
+				  name: 'Jake',
+				  id: 2,
+				  current: 0,
+				  genre: 'hiphop',
+				});
+	    	function clickHandler(e){
+	    		console.log('event',e);
+	    	}
+
+			function getCurrentPlayer(){
+			  if(player.getCurrent() == 1){
+			    return 1;
+			  }else{
+			    return 2;
+			  }
+			}
+
+
+	    	var myButton = document.getElementsByTagName('button')[0];
+			myButton.addEventListener('click', clickHandler);
+
+			$('button').on(click, clickHandler).attr('color', 'red');
+	    </script>
+		<h1>John's Tic Tac Toe Game</h1>
+		<h2 id="p1">Player 1</h2>
+		<h2 id="p2">Player 2</h2>
+		<h3>Scores</h3>
+		<table>
+		  <tr>
+		    <th>P1</th>
+		    <th>P2</th>
+		  </tr>
+		  <tr>
+		  	<td id="P1">0</td>
+		  	<td id="P2">0</td>
+		  </tr>
+	    </table>
+	    <br>
+
+		<table>
+		  <tr>
+		    <td><input type="button" class="button" value=""></td>
+		    <td><input type="button" class="button" value=""></td>
+		    <td><input type="button" class="button" value=""></td>
+		  </tr>
+		  <tr>
+		    <td><input type="button" class="button" value=""></td>
+		    <td><input type="button" class="button" value=""></td>
+		    <td><input type="button" class="button" value=""></td>
+		  </tr>
+		  <tr>
+		    <td><input type="button" class="button" value=""></td>
+		    <td><input type="button" class="button" value=""></td>
+		    <td><input type="button" class="button" value=""></td>
+		  </tr>
+		</table>
+	  </main>
+      <footer></footer>
+	</body>
+</html>

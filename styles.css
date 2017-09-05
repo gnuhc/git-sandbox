@@ -1,0 +1,34 @@
+h1 {
+	color: blue;
+}
+
+td {
+	color: blue;
+}
+
+.button {
+	color: green;
+	/*background-color: black;
+	border-color: black;*/
+}
+
+td {
+	/*background-color: black;
+	color: black;*/
+}
+
+td#P1 {
+	color: red;
+}
+
+td#P2 {
+	color: green;
+}
+
+table th, td {
+	border: 2px solid black;
+}
+
+table {
+	border-collapse: collapse;
+}
